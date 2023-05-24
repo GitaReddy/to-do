@@ -4,7 +4,10 @@
   
     function addItem() {
       if (newItem) {
+        
         items = [...items, newItem];
+       
+        
         newItem = "";
       }
     }
@@ -22,14 +25,16 @@
   </form>
   
   </main>
-  <ul>
-    {#each items as item, index (item.id)}
+  
+    {#each items as item, index}
       <li>
         {item}
         <button on:click={() => deleteItem(index)}>Delete</button>
       </li>
     {/each}
-  </ul>
+   
+
+  
   
   
   
